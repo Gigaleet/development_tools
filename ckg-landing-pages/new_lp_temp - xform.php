@@ -7,7 +7,7 @@ $form_step_js  = get_post_meta($thePostID, '_lp_form_step_js', true);
 $form_success_js  = get_post_meta($thePostID, '_lp_form_form_js', true);
 $form_ty  = get_post_meta($thePostID, '_lp_form_thankyous', true);
 //
-$thank_you = htmlspecialchars_decode($form_ty ,ENT_QUOTES);
+$thank_you = "<div id='ty'>" .htmlspecialchars_decode($form_ty ,ENT_QUOTES). "</div>";
 $step_success = htmlspecialchars_decode($form_step_js ,ENT_QUOTES);
 $form_success = htmlspecialchars_decode($form_success_js ,ENT_QUOTES);
 $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
@@ -21,9 +21,6 @@ $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
         <title><?php bloginfo('name'); ?></title>
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/custom/***CSS FILE NAME***.css" type="text/css" media="screen" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-        <!-- <script type='text/javascript' src='/wp-includes/js/jquery/jquery.js'></script> -->
-        <script type='text/javascript' src='/wp-content/plugins/xforms/assets/js/validate.js'></script>
-        <script type='text/javascript' src='/wp-content/plugins/xforms/assets/js/library.js'></script>
         <?php wp_head(); ?>
         <?php echo get_post_meta($thePostID, '_lp_form_head', true); ?>
         <script type="text/javascript">
