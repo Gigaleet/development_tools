@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<form>
+    <attributes>
+        <name>apply</name>
+        <id>apply</id>
+        <class>lead-form</class>
+        <method>post</method>
+        <action>/wp-content/plugins/ckg-lead-form/form_send.php</action>
+    </attributes>
+    
+    <options>
+        <submit_button_id>apply-submit</submit_button_id>
+        <process_type>ajax</process_type>
+        <js_success_callback>
+            <![CDATA[ 
+                jQuery('div.form-header').remove();
+                jQuery('input.default-submit').remove();
+                jQuery('p.privacy').remove();
+             ]]>
+        </js_success_callback>
+        <thankyou_message>
+         <![CDATA[ 
+            <div class="thankyou">
+                <h3>Apply Now</h3>
+                <p><img src="/wp-content/themes/ckg-blank/custom/img/img_brochure.png">Thank You for your interest in the Saunders online Executive MBA program.</p>
+                <p><a href="/docs/25854_RIT_EMBA_Brochure_FINAL.pdf" target="_blank">Click here</a> to download a copy of the online EMBA brochure (PDF).</p>
+                <p><small>If you do not have Adobe® Acrobat® Reader, you can <a href="http://get.adobe.com/reader/" target="_blank">download</a> it free from the Adobe® website.</small></p>              
+                <p>For immediate assistance, contact an<br>Enrollment Advisor at:<br>Toll Free: 1-888-907-2808 Ext. 3374<br>Email: <a href="mailto:admissions@embaonline.rit.edu" target="_blank">admissions@embaonline.rit.edu</a></p>
+            </div>
+          ]]>
+        </thankyou_message>
+    </options>
+
+    <before_fieldsets>
+        <items>         
+                <item type="code">
+                    <code>
+                        <![CDATA[ 
+                            <div class="form-header">
+                                <h3>Apply Now</h3>
+                                <p><img src="/wp-content/themes/ckg-blank/custom/img/img_brochure.png">Take the next step toward advancing your career.</p>
+                                <p>Complete the form to receive your <strong>EMBA program brochure</strong>.</p>
+                            </div>
+                        ]]>
+                    </code>         
+                </item>             
+        </items>
+    </before_fieldsets>        
+    
+    <fieldsets>
+        <fieldset>
+            
+            <attributes>
+                <id>fieldset-apply-1</id>
+                <class>fieldset-global first last</class>
+            </attributes>
+            
+            <items>
+
+                <item type="hidden">
+                    <attributes>
+                        <name>access_code</name>
+                        <value>RIT-EMBA-SEO</value>
+                    </attributes>                           
+                </item>
+
+                <item type="hidden">
+                    <attributes>
+                        <name>program</name>
+                        <value>RIT_EMBA</value>
+                    </attributes>                           
+                </item>
+
+                <item type="hidden">
+                    <attributes>
+                        <name>goal_tracker</name>
+                        <value>thank</value>
+                    </attributes>                           
+                </item>                
+
+                <item type="text">
+                    <attributes>
+                        <name>first_name</name>
+                        <class>default-text</class>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="First Name field is Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ <label>First Name:</label> ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>   
+                
+                <item type="text">
+                    <attributes>
+                        <name>last_name</name>
+                        <class>default-text</class>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Last Name field is Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ <label>Last Name:</label> ]]></code_before>  
+                        <code_after><![CDATA[ ]]></code_after>              
+                    </options>                                        
+                </item>                                                  
+
+                <item type="text">
+                    <attributes>
+                        <name>primary_phone</name>
+                        <class>default-text</class>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="phone is required" />
+                        <rule method="phone_dash" value="true" message="format accepted: xxx-xxx-xxxx" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[<label>Primary Number:</label> ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>  
+                 
+                <item type="text">
+                    <attributes>
+                        <name>email</name>
+                        <class>default-text</class>         
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Email field is Required" />
+                        <rule method="email" value="true" message="Valid Email Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ <label>Email Address:</label> ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                                                
+                <item type="text">
+                    <attributes>
+                        <name>zip</name>
+                        <class>default-text</class>
+                        
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Zipcode field is Required" />
+                        <rule method="minlength" value="2" message="Zipcode field requires at least 2 characters" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ <label>Zip Code:</label> ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item> 
+                
+            </items>
+
+        </fieldset>    
+                     
+              
+    </fieldsets>
+    
+    <after_fieldsets>
+        <items>
+                <item type="code">
+                    <code>
+                        <![CDATA[ <p class="privacy">We value your <a href="/?p=25/">Privacy</a></p> ]]>
+                    </code>
+                </item>    
+
+                <item type="submit">
+                    <attributes>
+                       <id>apply-submit</id>
+                       <class>default-submit</class>
+                       <value></value>
+                    </attributes>
+                                                          
+                </item>             
+        </items>
+    </after_fieldsets>
+
+    
+</form>

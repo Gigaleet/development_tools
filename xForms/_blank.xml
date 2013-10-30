@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<form>
+    <attributes> 
+        <name>FrontPage_Form1</name>
+        <id>au_mshi_combo</id>
+        <class>lead-form multi-stage</class>
+        <method>post</method>
+        <action>/wp-content/plugins/ckg-lead-form/form_send.php</action>
+    </attributes>
+    
+    <options>
+        <submit_button_id>mshi-combo-submit</submit_button_id>
+        <process_type>ajax</process_type>
+			
+       
+        <js_success_callback>
+            <![CDATA[ jQuery('.privacy').remove(); ]]>
+        </js_success_callback>
+        <thankyou_message>
+         <![CDATA[ ]]>
+        </thankyou_message>
+    </options>  
+
+    <fieldsets>
+	
+        <fieldset>
+            
+            <attributes>
+                <id>three_stage_first_fieldset</id>
+                <class>fieldset-global first</class>
+            </attributes>
+            
+            <items>
+                <item type="hidden">
+                    <attributes>
+                        <name>goal_tracker</name>
+                        <value>thank</value>
+                    </attributes>                           
+                </item>
+                <item type="hidden">
+                    <attributes>
+                        <name>access_code</name>
+                        <value>AU-MSHI-OTHER</value>
+                    </attributes>                           
+                </item>
+
+                <item type="hidden">
+                    <attributes>
+                        <name>program</name>
+                        <value>AU_MSHI</value>
+                    </attributes>                           
+                </item>
+                
+                <item type="code">
+                    <code>
+                    <![CDATA[ 
+						
+                        <div class="stage-header">
+                            <div class="stage-count">
+                            </div>
+                            <p><span>1.</span>I'd like this degree to help me...</p> 
+                        </div>                                  
+
+                     ]]>
+                    </code>
+                </item>
+                
+               
+               <item type="radio">
+                    <attributes>
+                        <name>motivation</name>
+                        <value>Accomplish my personal goals</value>
+                        <class>default-radio</class>
+                        <id>radio1</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio1">Accomplish my personal goals</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>                             
+                <item type="radio">
+                    <attributes>
+                        <name>motivation</name>
+                        <value>Change careers</value>
+                        <class>default-radio</class>
+                        <id>radio2</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio2">Change careers</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>     
+                <item type="radio">
+                    <attributes>
+                        <name>motivation</name>
+                        <value>Enhance my current expertise</value>
+                        <class>default-radio</class>
+                        <id>radio3</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio3">Enhance my current expertise</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>
+				<item type="radio">
+                    <attributes>
+                        <name>motivation</name>
+                        <value>Seek a promotion</value>
+                        <class>default-radio</class>
+                        <id>radio4</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio4">Seek a promotion</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>
+				<item type="radio">
+                    <attributes>
+                        <name>motivation</name>
+                        <value>Other</value>
+                        <class>default-radio</class>
+                        <id>radio5</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio5">Other</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>
+				
+                                                   
+            </items>
+
+        </fieldset>    
+   
+
+		
+		<fieldset>
+            
+            <attributes>
+                <id>three_stage_second_fieldset</id>
+                <class>fieldset-global second</class>
+            </attributes>
+            
+            <items>
+                <item type="code">
+                    <code>
+                    <![CDATA[ 
+
+                        <div class="stage-header">
+                            <div class="stage-count" id="steptwo">
+                            </div>
+                            <p><span>2.</span>What is your highest level of education?</p> 
+                        </div>                                                    
+
+                     ]]>
+                    </code>
+                </item>
+                <item type="radio">
+                    <attributes>
+                        <name>highest_degree_earned</name>
+                        <value>Bachelors</value>
+                        <class>default-radio</class>
+                        <id>radio6</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio6">Bachelors</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>                             
+                <item type="radio">
+                    <attributes>
+                        <name>highest_degree_earned</name>
+                        <value>Masters</value>
+                        <class>default-radio</class>
+                        <id>radio7</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio7">Masters</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>     
+                <item type="radio">
+                    <attributes>
+                        <name>highest_degree_earned</name>
+                        <value>Doctorate</value>
+                        <class>default-radio</class>
+                        <id>radio8</id>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[   ]]></code_before>  
+                        <code_after><![CDATA[  <label for="radio8">Doctorate</label><br />  ]]></code_after>                   
+                    </options> 
+                </item>                    
+                
+            </items>
+
+        </fieldset>
+		
+
+
+        <fieldset>
+            <attributes>
+                <id>three_stage_third_fieldset</id>
+                <class>fieldset-global third</class>
+            </attributes>            
+            <items>    
+                
+               
+                <item type="code">
+                    <code>
+                    <![CDATA[ 
+
+                        <div class="stage-header">
+                            <div class="stage-count"  id="stepthree">
+                            </div>
+                            <p><span>3.</span>Contact Information</p> 
+                        </div>                        
+                     ]]>
+                    </code>
+                </item>                               
+				<item type="text">
+                    <attributes>
+                        <name>name</name>
+                        <class>default-text</class>
+						<placeholder>First, Last Name:</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="full_name" value="true" message="Full name field is Required" />
+						<rule method="required" value="true" message="Full name field is Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                     
+                </item>   
+                
+                 <item type="text">
+                    <attributes>
+                        <name>email</name>
+                        <class>default-text</class>
+						<placeholder>Email:</placeholder>        
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Email field is Required" />
+                        <rule method="email" value="true" message="Valid Email Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>           
+                                              
+                 
+                <item type="text">
+                    <attributes>
+                        <name>primary_phone</name>
+                        <class>default-text</class>
+						<placeholder>Phone:</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Phone is required" />
+                        <rule method="phone_dash" value="true" message="Format accepted: xxx-xxx-xxxx" />
+                    </validation>
+                    <options>
+                        <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                 
+                    </options>                                        
+                </item>
+				
+				<item type="text">
+                    <attributes>
+                        <name>zip</name>
+                        <class>default-text</class>
+						<placeholder>Zip Code:</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Zipcode field is Required" />
+                        <rule method="minlength" value="2" message="Zipcode field requires at least 2 characters" />
+                    </validation>
+                     <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>          
+
+                                           
+                                                                                                                 
+            </items>               
+        </fieldset>                       
+  
+		      
+    </fieldsets>
+    
+    <after_fieldsets>
+        <items>
+                        
+            <item type="submit">
+                <attributes>
+                   <id>mshi-combo-submit</id>
+                   <class>default-submit</class>
+                   <value>Next</value>
+                </attributes>                                
+            </item>             
+            <item type="code">
+                <code>
+               <![CDATA[ <p class="privacy">We Value your <a href="/privacy-policy-popup" rel="pop">Privacy</a></p> ]]>
+                </code>
+            </item>
+
+        </items>
+    </after_fieldsets>
+
+    
+</form>

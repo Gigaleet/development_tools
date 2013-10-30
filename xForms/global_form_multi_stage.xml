@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<form>
+    <attributes> <!-- form attributes go in <form {here} -->
+        <name>global_form_multi_stage</name>
+        <id>global-form-multi-stage</id>
+        <class>lead-form primary</class>
+        <method>post</method>
+        <action>/wp-content/plugins/ckg-lead-form/form_send.php</action>
+    </attributes>
+    
+    <options>
+        <submit_button_id>global-submit</submit_button_id>
+        <process_type>ajax</process_type>
+        <js_step_success_callback>
+            <![CDATA[
+                if(stage_number == 2) 
+                { 
+                    jQuery('#global-submit').val(function(i,val){
+                        return val.replace('Learn More','Submit');
+                    });
+                }
+            ]]>
+       </js_step_success_callback>
+        <js_success_callback>
+            <![CDATA[ jQuery('#global-form-multi-stage .privacy').remove(); ]]>
+        </js_success_callback>
+        <thankyou_message>
+         <![CDATA[ ]]>
+        </thankyou_message>
+    </options>  
+    
+    <fieldsets>
+
+        <fieldset>           
+            <attributes>
+                <id>fieldset-global-1</id>
+                <class>fieldset-global first</class>
+            </attributes>        
+            <items>
+
+                <item type="hidden">
+                    <attributes>
+                        <name>goal_tracker</name>
+                        <value>thankheader</value>
+                    </attributes>                           
+                </item>
+                <item type="hidden">
+                    <attributes>
+                        <name>access_code</name>
+                        <value>UAB-ACC-SEO</value>
+                    </attributes>                           
+                </item>   
+
+                <item type="code">
+                    <code>
+                    <![CDATA[ 
+
+                        <div class="form-header">
+                            <h3>Have Questions?</h3>                                    
+                            <p><img src="/wp-content/themes/ckg-blank/custom/img/img_brochure.png"><strong>Complete this form to download a free program brochure and an Enrollment Advisor will contact you promptly.</strong></p>
+                            <p>This will only take a minute.</p>
+                        </div>
+
+                        <div class="stage-header">
+                            <ul class="stage-count two-step">
+                                <li class="first">1</li>
+                                <li class="second">2</li>
+                            </ul>
+                            <h3>
+                                <span class="label-number">1.</span>
+                                <span class="label-text">Which program are you interested in?</span>
+                            </h3> 
+                        </div>                           
+
+                     ]]>
+                    </code>
+                </item>
+                
+                <item type="radio">
+                    <attributes>
+                        <name>program</name>
+                        <value>UAB_BACC</value>
+                        <class>default-radio</class>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[  ]]></code_before>  
+                        <code_after><![CDATA[ <label>Bachelor of Science in Accounting </label> <br />  ]]></code_after>                   
+                    </options> 
+                </item>
+
+                <item type="radio">
+                    <attributes>
+                        <name>program</name>
+                        <value>UAB_MACC</value>
+                        <class>default-radio</class>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="This question is required"/>
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[  ]]></code_before>  
+                        <code_after><![CDATA[  <label>Master of Accounting </label> <br />  ]]></code_after>                   
+                    </options> 
+                </item>     
+   
+            </items>
+        </fieldset>    
+        
+        <fieldset>
+            <attributes>
+                <id>fieldset-global-2</id>
+                <class>fieldset-global second</class>
+            </attributes>            
+            <items>                
+  
+                <item type="code">
+                    <code>
+                    <![CDATA[      
+
+                        <div class="form-header">
+                            <h3>Have Questions?</h3>                                    
+                            <p><img src="/wp-content/themes/ckg-blank/custom/img/img_brochure.png"><strong>Complete this form to download a free program brochure and an Enrollment Advisor will contact you promptly.</strong></p>
+                            <p>This will only take a minute.</p>
+                        </div>
+
+                        <div class="stage-header">
+                            <ul class="stage-count two-step">
+                                <li class="first">1</li>
+                                <li class="second">2</li>
+                            </ul>
+                            <h3>
+                                <span class="label-number">2.</span>
+                                <span class="label-text">Personal Information </span>
+                            </h3> 
+                        </div>            
+                    
+                     ]]>
+                    </code>
+                </item>
+                 
+                <item type="text">
+                    <attributes>
+                        <name>name</name>
+                        <class>default-text</class>
+                        <placeholder>Full Name:</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Full Name field is Required" />
+                        <rule method="fullname" value="true" message="Name field is Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                 
+                <item type="text">
+                    <attributes>
+                        <name>email</name>
+                        <class>default-text</class>
+                        <placeholder>Email:</placeholder>           
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Email field is Required" />
+                        <rule method="email" value="true" message="Valid Email Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                 
+                <item type="text">
+                    <attributes>
+                        <name>primary_phone</name>
+                        <class>default-text</class>
+                        <placeholder>Phone:</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="phone is required" />
+                        <rule method="phone_dash" value="true" message="format accepted: xxx-xxx-xxxx" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                  
+                 
+                <item type="text">
+                    <attributes>
+                        <name>zip</name>
+                        <class>default-text</class>
+                        <placeholder>Zip Code:</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Zipcode field is Required" />
+                        <rule method="minlength" value="2" message="Zipcode field requires at least 2 characters" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                              
+            </items>               
+        </fieldset>                       
+              
+    </fieldsets>
+    
+    <after_fieldsets>
+        <items>
+
+                <item type="code">
+                    <code>
+                    <![CDATA[ <p class="privacy">We Value your <a href="/privacy-policy/">Privacy</a></p> ]]>
+                    </code>
+                </item>
+                              
+                <item type="submit">
+                    <attributes>
+                       <id>global-submit</id>
+                       <class>default-submit</class>
+                       <value>Learn More</value>
+                    </attributes>                                
+                </item>           
+
+        </items>
+    </after_fieldsets>
+
+</form>

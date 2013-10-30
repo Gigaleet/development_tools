@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<form>
+    <attributes>
+        <name>footer-form</name>
+        <id>footer_form</id>
+        <class>lead-form</class>
+        <method>post</method>
+        <action>/wp-content/plugins/ckg-lead-form/form_send.php</action>
+    </attributes>
+    
+    <options>
+        <submit_button_id>footer-submit</submit_button_id>
+        <process_type>ajax</process_type>
+        <js_success_callback>
+            <![CDATA[ jQuery('#footer_form .privacy').remove(); ]]>
+        </js_success_callback>
+        <thankyou_message>
+         <![CDATA[ ]]>
+        </thankyou_message>
+    </options>
+       
+    
+    <fieldsets>
+        <fieldset>
+            
+            <attributes>
+                <id>fieldset-footer-1</id>
+                <class>fieldset-global first last</class>
+            </attributes>
+            
+            <items>
+                <item type="hidden">
+                    <attributes>
+                        <name>access_code</name>
+                        <value>RIT-EMBA-SEO</value>
+                    </attributes>                           
+                </item>
+                <item type="hidden">
+                    <attributes>
+                        <name>goal_tracker</name>
+                        <value>thank</value>
+                    </attributes>                           
+                </item>
+                <item type="hidden">
+                    <attributes>
+                        <name>program</name>
+                        <value>RIT_EMBA</value>
+                    </attributes>                           
+                </item>
+              
+
+                <item type="code">
+                    <code>
+                    <![CDATA[ 
+
+                        <div class="form-header">
+                                    
+                            <p><img src="/wp-content/themes/ckg-blank/custom/img/img_brochure.png">Complete this form to download a free program brochure and an Enrollment Advisor will contact you promptly.</p>
+
+                        </div>                                
+
+                     ]]>
+                    </code>
+                </item>
+
+                <item type="text">
+                    <attributes>
+                        <name>name</name>
+                        <class>default-text</class>
+                        <placeholder>Name</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="fullname" value="true" message="Name field is Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                 
+                <item type="text">
+                    <attributes>
+                        <name>email</name>
+                        <class>default-text</class>
+                        <placeholder>Email</placeholder>           
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Email field is Required" />
+                        <rule method="email" value="true" message="Valid Email Required" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                 
+                <item type="text">
+                    <attributes>
+                        <name>primary_phone</name>
+                        <class>default-text</class>
+                        <placeholder>Phone</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="phone is required" />
+                        <rule method="phone_dash" value="true" message="format accepted: xxx-xxx-xxxx" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item>                                 
+                 
+                <item type="text">
+                    <attributes>
+                        <name>zip</name>
+                        <class>default-text</class>
+                        <placeholder>Zip Code</placeholder>
+                    </attributes>
+                    <validation>
+                        <rule method="required" value="true" message="Zipcode field is Required" />
+                        <rule method="minlength" value="2" message="Zipcode field requires at least 2 characters" />
+                    </validation>
+                    <options>
+                        <code_before><![CDATA[ ]]></code_before>
+                        <code_after><![CDATA[ ]]></code_after>                  
+                    </options>                                        
+                </item> 
+                
+            </items>
+
+        </fieldset>    
+                     
+              
+    </fieldsets>
+    
+    <after_fieldsets>
+        <items>
+
+                 <item type="code">
+                    <code>
+                    <![CDATA[ <p class="privacy">We Value your <a href="/privacy-policy/">Privacy</a></p> ]]>
+                    </code>
+                </item>
+
+                <item type="submit">
+                    <attributes>
+                       <id>footer-submit</id>
+                       <class>default-submit</class>
+                       <value></value>
+                    </attributes>
+                                                          
+                </item>             
+        </items>
+    </after_fieldsets>
+
+    
+</form>
