@@ -79,7 +79,7 @@
                     </validation>
                     <options>
                         <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio1">Accomplish my personal goals</label><br />  ]]></code_after>                   
+                        <code_after><![CDATA[  <label for="radio1" class="radio-label">Accomplish my personal goals</label> ]]></code_after>                   
                     </options> 
                 </item>                             
                 <item type="radio">
@@ -94,7 +94,7 @@
                     </validation>
                     <options>
                         <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio2">Change careers</label><br />  ]]></code_after>                   
+                        <code_after><![CDATA[  <label for="radio2" class="radio-label">Change careers</label> ]]></code_after>                   
                     </options> 
                 </item>     
                 <item type="radio">
@@ -109,7 +109,7 @@
                     </validation>
                     <options>
                         <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio3">Enhance my current expertise</label><br />  ]]></code_after>                   
+                        <code_after><![CDATA[  <label for="radio3" class="radio-label">Enhance my current expertise</label> ]]></code_after>                   
                     </options> 
                 </item>
 				<item type="radio">
@@ -124,7 +124,7 @@
                     </validation>
                     <options>
                         <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio4">Seek a promotion</label><br />  ]]></code_after>                   
+                        <code_after><![CDATA[  <label for="radio4" class="radio-label">Seek a promotion</label> ]]></code_after>                   
                     </options> 
                 </item>
 				<item type="radio">
@@ -171,51 +171,28 @@
                      ]]>
                     </code>
                 </item>
-                <item type="radio">
+                <item type="select">
                     <attributes>
-                        <name>highest_degree_earned</name>
-                        <value>Bachelors</value>
-                        <class>default-radio</class>
-                        <id>radio6</id>
+                        <name>specialization</name>
+                        <class>default_select</class>
                     </attributes>
+                    <select>
+                        <option value="">I am interested in:</option>
+                        <option value="Criminology &amp; Criminal Justice">Criminology &amp; Criminal Justice</option>
+                        <option value="Crime Analysis">Crime Analysis</option>
+                        <option value="Criminal Behavior">Criminal Behavior</option>
+                        <option value="Leadership in Criminal Justice">Leadership in Criminal Justice</option>
+                    </select>
                     <validation>
-                        <rule method="required" value="true" message="This question is required"/>
+                        <rule method="required" value="true" message="This Field is Required"/>
                     </validation>
                     <options>
-                        <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio6">Bachelors</label><br />  ]]></code_after>                   
-                    </options> 
-                </item>                             
-                <item type="radio">
-                    <attributes>
-                        <name>highest_degree_earned</name>
-                        <value>Masters</value>
-                        <class>default-radio</class>
-                        <id>radio7</id>
-                    </attributes>
-                    <validation>
-                        <rule method="required" value="true" message="This question is required"/>
-                    </validation>
-                    <options>
-                        <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio7">Masters</label><br />  ]]></code_after>                   
-                    </options> 
-                </item>     
-                <item type="radio">
-                    <attributes>
-                        <name>highest_degree_earned</name>
-                        <value>Doctorate</value>
-                        <class>default-radio</class>
-                        <id>radio8</id>
-                    </attributes>
-                    <validation>
-                        <rule method="required" value="true" message="This question is required"/>
-                    </validation>
-                    <options>
-                        <code_before><![CDATA[   ]]></code_before>  
-                        <code_after><![CDATA[  <label for="radio8">Doctorate</label><br />  ]]></code_after>                   
-                    </options> 
-                </item>                    
+                        <code_before>
+                               <![CDATA[ ]]>
+                        </code_before> 
+                        <code_after><![CDATA[  ]]></code_after>                  
+                    </options>                                       
+                </item>                        
                 
             </items>
 
