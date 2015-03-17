@@ -45,7 +45,7 @@ $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
 
 
 		<!-- Logo -->
-        <?php echo get_post_meta($thePostID, '_lp_logo_image', true); ?>
+        	<?php echo get_post_meta($thePostID, '_lp_logo_image', true); ?>
 		
 
 		<!-- Program Title -->
@@ -61,7 +61,7 @@ $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
 
 		
 		<!-- Content -->
-	    <?php
+	    	<?php
 			$pos=strpos($post->post_content, '<!--more-->');
 		    if($pos) : 
 		        echo do_shortcode(substr($post->post_content,0, $pos)); 
@@ -77,48 +77,48 @@ $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
 
 
 		<!-- Link Boxes -->
-	    <?php echo get_post_meta($thePostID, '_link_bx1-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx1-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx1-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx1-link', true)); ?>
+		<?php echo get_post_meta($thePostID, '_link_bx1-title', true); ?>
+		<?php echo get_post_meta($thePostID, '_link_bx1-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx1-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx1-link', true)); ?>
 
-	    <?php echo get_post_meta($thePostID, '_link_bx2-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx2-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx2-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx2-link', true)); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx2-title', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx2-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx2-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx2-link', true)); ?>
 
-	    <?php echo get_post_meta($thePostID, '_link_bx3-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx3-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx3-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx3-link', true)); ?>
+    	        <?php echo get_post_meta($thePostID, '_link_bx3-title', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx3-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx3-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx3-link', true)); ?>
 
-	    <?php echo get_post_meta($thePostID, '_link_bx4-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx4-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx4-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx4-link', true)); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx4-title', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx4-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx4-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx4-link', true)); ?>
 
-	    <?php echo get_post_meta($thePostID, '_link_bx5-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx5-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx5-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx5-link', true)); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx5-title', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx5-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx5-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx5-link', true)); ?>
 
-	    <?php echo get_post_meta($thePostID, '_link_bx6-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx6-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx6-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx6-link', true)); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx6-title', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx6-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx6-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx6-link', true)); ?>
 
-	    <?php echo get_post_meta($thePostID, '_link_bx7-title', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx7-text', true); ?>
-	    <?php echo get_post_meta($thePostID, '_link_bx7-image', true); ?>
-	    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx7-link', true)); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx7-title', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx7-text', true); ?>
+	        <?php echo get_post_meta($thePostID, '_link_bx7-image', true); ?>
+	        <?php echo get_permalink(get_post_meta($thePostID, '_link_bx7-link', true)); ?>
 
-	    <!-- IF Example -->
+	    	<!-- IF Example -->
 	    	<?php if(get_post_meta($thePostID, '_link_bx7-text', true)): ?>
-			    <?php echo get_post_meta($thePostID, '_link_bx7-title', true); ?>
-			    <?php echo get_post_meta($thePostID, '_link_bx7-text', true); ?>
-			    <?php echo get_post_meta($thePostID, '_link_bx7-image', true); ?>
-			    <?php echo get_permalink(get_post_meta($thePostID, '_link_bx7-link', true)); ?>
-		    <?php endif; ?>
+			<?php echo get_post_meta($thePostID, '_link_bx7-title', true); ?>
+			<?php echo get_post_meta($thePostID, '_link_bx7-text', true); ?>
+			<?php echo get_post_meta($thePostID, '_link_bx7-image', true); ?>
+			<?php echo get_permalink(get_post_meta($thePostID, '_link_bx7-link', true)); ?>
+		<?php endif; ?>
 
 
 		<!-- Quote -->
@@ -126,19 +126,25 @@ $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
 
 
 		<!-- Form Title -->
-        <?php echo get_post_meta($thePostID, '_lp_form_title', true); ?>
+        	<?php echo get_post_meta($thePostID, '_lp_form_title', true); ?>
 		
         
-        <!-- Form Copy -->
-			<?php echo get_post_meta($thePostID, '_lp_form_text', true); ?>
+        	<!-- Form Copy -->
+		<?php echo get_post_meta($thePostID, '_lp_form_text', true); ?>
 	    
 
-	    <!-- xforms -->     
-	    <? echo $xfp->init($path,$step_success,$form_success,$thank_you); ?>
+	    	<!-- xforms -->     
+	    	<? echo $xfp->init($path,$step_success,$form_success,$thank_you); ?>
 		
 
 		<!-- Footer -->
 		<?php echo get_post_meta($thePostID, '_lp_footer_text', true); ?>
+		
+		
+		
+		
+		
+		
 		
 		<!-- WP Footer -->
 		<?php wp_footer(); ?>
