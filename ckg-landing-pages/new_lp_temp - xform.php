@@ -139,6 +139,9 @@ $path = TEMPLATEPATH.DIRECTORY_SEPARATOR.'xforms'.DIRECTORY_SEPARATOR.$xml_file;
 
 		<!-- Footer -->
 		<?php echo get_post_meta($thePostID, '_lp_footer_text', true); ?>
-
+		
+		<!-- WP Footer -->
+		<?php wp_footer(); ?>
+		<!-- /END WP Footer -->
 	</body>
 </html>
